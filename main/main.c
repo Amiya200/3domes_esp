@@ -70,10 +70,10 @@ void send_ascii_multi(const char *cmd)
     ESP_LOGI("TX", "%s", buf);
 
     /* TM */
-    strcpy(buf, cmd);
-    buf[strlen(buf) - 1] = 'M';
-    esp_now_send(BC_MAC, (uint8_t *)buf, strlen(buf));
-    ESP_LOGI("TX", "%s", buf);
+    // strcpy(buf, cmd);
+    // buf[strlen(buf) - 1] = 'M';
+    // esp_now_send(BC_MAC, (uint8_t *)buf, strlen(buf));
+    // ESP_LOGI("TX", "%s", buf);
 
     last_activity_ms = xTaskGetTickCount() * portTICK_PERIOD_MS;
 }
